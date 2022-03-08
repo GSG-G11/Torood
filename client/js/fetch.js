@@ -7,6 +7,8 @@ const getCustomers = (customers) => {
   customers.forEach((customer) => {
     const option = document.createElement('option');
     option.textContent = customer.name;
+    option.value = customer.id;
+    option.name = 'customerId';
     selectSection.appendChild(option);
   });
 };

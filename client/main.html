@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://torood.co/assets/images/logo.svg" type="image/x-icon">
     <title>Torood</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -14,78 +15,175 @@
 
     <header>
         <img class="logo" src="https://torood.co/assets/images/logo.svg" alt="Logo">
+        <a href="index.html" class="t_logo">Torood</a>
     </header>
 
-    <main>
-        <!-- All Packages -->
-        <section id="all-screen">
+    <div class="tabs">
+        <button class="btn">Add Store</button>
+        <button class="btn">Add Customer</button>
+        <button class="btn active">Packages</button>
+    </div>
 
-            <div class="tile">
-                <img src="images/dress.Jpg" alt="image" class="pa_img">
-                <p class="package_name">Dress</p>
-                <p class="package_price">22 NIS</p>
-                <p class="package_date">24 April 2022</p>
-            </div>
-            <div class="tile">
-                <img src="images/dress.Jpg" alt="image" class="pa_img">
-                <p class="package_name">Dress</p>
-                <p class="package_price">22 NIS</p>
-                <p class="package_date">24 April 2022</p>
-            </div>
-        </section>
+    <div class="tab" id="store" style="display: none;">
+        <div class="main">
+            <div class="container">
+                <div class="heading-form">
+                    <h2>Welcome To Torood &#127881;</h2>
+                </div>
+                <div class="main-bg">
+                    <div class="form-holder">
+                        <div class="form-bg">
+                            <form action="/add-store" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storeName" aria-describedby="emailHelp"
+                                        name="name" placeholder="Enter your store name">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storePhone" name="phone"
+                                        placeholder="Enter your store phone">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storeLink" name="link"
+                                        placeholder="Enter your store website link">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Store</button>
+                            </form>
+                        </div>
 
-        <!-- Sent Packages -->
-        <section id="sent-screen"> </section>
+                        <!-- <div class="but-img">
+                            <img src="https://torood.co/assets/images/iphone-feature-bg-r.svg" class="torood-bg-img">
+                        </div> -->
 
-        <!-- Add Modal Box Section -->
-        <div class="modal" id="modal">
-            <div class="modal-header">
-                <p class="modal-title">Write Your Order!</p>
-                <button class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form action="/add-package" method="POST">
-                    <div class="first_row">
-                        <input type="text" id="packageName" class="name" placeholder="Enter the package name" name="name">
-                        <input type="date" id="packagedate" class="name" placeholder="Enter the date" name="date">
                     </div>
-                    <label>Customer Name</label>
-                    <select name="customer_name" id="selectSection">
-                     
-                    </select>
-                    <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link" name="image">
-                    <input id="button" type="submit" value="Submit">
-                </form>
+                    <div class="right-div">
+                        <img class="right" src="https://torood.co/assets/images/logo.svg" alt="Torood Image">
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Overlay -->
-        <div id="overlay"></div>
-    </main>
-    <!-- Footer -->
-    <footer>
-        <div id="container">
-            <div class="inner-container">
-                <div class="toggle">
-                    <p>Sent</p>
-                </div>
-                <div class="toggle">
-                    <p>All</p>
-                </div>
-            </div>
-            <div class="inner-container" id='toggle-container'>
-                <div class="toggle">
-                    <p>Done</p>
-                </div>
-                <div class="toggle">
-                    <p>All</p>
-                </div>
-            </div>
         </div>
+    </div>
 
-        <button class="add-btn">+</button>
-    </footer>
-    
+    <div class="tab" id="package">
+       <div class="container">
+            <main>
+                <div class="heading-form">
+                    <h2>All Packages</h2>
+                </div>
+                <!-- All Packages -->
+                <section id="all-screen">
+            
+                    <div class="tile">
+                        <img src="images/dress.Jpg" alt="image" class="pa_img">
+                        <p class="package_name">Dress</p>
+                        <p class="package_price">22 NIS</p>
+                        <p class="package_date">24 April 2022</p>
+                    </div>
+                    <div class="tile">
+                        <img src="images/dress.Jpg" alt="image" class="pa_img">
+                        <p class="package_name">Dress</p>
+                        <p class="package_price">22 NIS</p>
+                        <p class="package_date">24 April 2022</p>
+                    </div>
+                </section>
+            
+                <!-- Sent Packages -->
+                <section id="sent-screen"> </section>
+            
+                <!-- Add Modal Box Section -->
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <p class="modal-title">Write Your Order!</p>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/add-package" method="POST">
+                            <div class="first_row">
+                                <input type="text" id="packageName" class="name" placeholder="Enter the package name" name="name">
+                                <input type="date" id="packagedate" class="name" placeholder="Enter the date" name="date">
+                            </div>
+                            <label>Customer Name</label>
+                            <select name="customer_name" id="selectSection">
+            
+                            </select>
+                            <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link" name="image">
+                            <input id="button" type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            
+                <!-- Overlay -->
+                <div id="overlay"></div>
+            </main>
+            <!-- Footer -->
+            <footer>
+                <div id="container">
+                    <div class="inner-container">
+                        <div class="toggle">
+                            <p>Sent</p>
+                        </div>
+                        <div class="toggle">
+                            <p>All</p>
+                        </div>
+                    </div>
+                    <div class="inner-container" id='toggle-container'>
+                        <div class="toggle">
+                            <p>Sent</p>
+                        </div>
+                        <div class="toggle">
+                            <p>All</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <button class="add-btn">+</button>
+            </footer>
+       </div>
+    </div>
+
+    <div class="tab" id="customer" style="display: none;">
+        <div class="main">
+            <div class="container">
+                <div class="heading-form">
+                    <h2>Add new customer &#127881;</h2>
+                </div>
+                <div class="main-bg">
+                    <div class="form-holder">
+                        <div class="form-bg">
+                            <form action="/add-customer" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storeName" aria-describedby="emailHelp"
+                                        name="name" placeholder="Enter customer name">
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storePhone" name="phone"
+                                        placeholder="Enter customer phone">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="storeLink" name="address"
+                                        placeholder="Enter customer address">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Customer</button>
+                            </form>
+                        </div>
+
+                        <!-- <div class="but-img">
+                                <img src="https://torood.co/assets/images/iphone-feature-bg-r.svg" class="torood-bg-img">
+                            </div> -->
+
+                    </div>
+                    <div class="right-div">
+                        <img class="right" src="https://torood.co/assets/images/logo.svg" alt="Torood Image">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
     <script src="js/fetch.js"></script>
     <script src="js/index.js"></script>
 </body>
