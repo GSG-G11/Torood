@@ -1,0 +1,303 @@
+/* --------------------- Fonts  ----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* --------------------- General Style ----------------------*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --main-color: #fec900;
+  --main-color2: #fea900;
+  --dark-gray: #666666;
+  --light-gray: #5e646a;
+  --background: #121421;
+  --white: #ffffff;
+  --black: #000000;
+  --shadow: #c0c0c0;
+}
+
+body {
+  background-color: var(--background);
+}
+
+#overlay {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------- Header Style ----------------------*/
+
+header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background);
+}
+
+.logo {
+  width: 35px;
+  margin: 15px 20px;
+}
+
+/* --------------------- .packages-tiles Section Style ----------------------*/
+
+#all-screen,
+#sent-screen {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+}
+
+.tile {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: var(--white);
+  padding: 20px 20px;
+  margin-top: 20px;
+  height: 200px;
+}
+
+.pa_img {
+  width: 30%;
+  height: 70%;
+  object-fit: cover;
+}
+
+/* --------------------- Footer Style "Add btn & toggle"  ----------------------*/
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  padding: 10px 20px;
+  right: 0px;
+  width: 100%;
+  flex-direction: row;
+  background-color: var(--background);
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: var(--main-color2);
+  border: none;
+  outline: none;
+  color: var(--background);
+  font-size: 36px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.add-btn:focus {
+  transform: scale(1.1);
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+a {
+  text-decoration: none;
+  opacity: 0.6;
+  padding: 60px;
+  font-weight: bolder;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 1.4em;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+#container {
+  width: 230px;
+  height: 36px;
+  margin: auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.inner-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+}
+
+.inner-container:first-child {
+  background: #e9e9e9;
+  color: #a9a9a9;
+}
+
+.inner-container:nth-child(2) {
+  background: var(--main-color2);
+  color: var(--black);
+  clip-path: inset(0 50% 0 0);
+  transition: 0.3s cubic-bezier(0, 0, 0, 1);
+}
+
+.toggle {
+  width: 50%;
+  position: absolute;
+  height: inherit;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.toggle p {
+  margin: auto;
+  font-size: 15px;
+}
+
+.toggle:nth-child(1) {
+  right: 0;
+}
+
+/* --------------------- Modal Box Style ----------------------*/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--white);
+  width: 600px;
+  max-width: 80%;
+  display: none;
+}
+
+#modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--background);
+}
+
+.modal-title {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.modal-header .close-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 3px;
+}
+
+.first_row {
+  display: grid;
+  grid-template-columns: repeat(2, 290px);
+  gap: 0;
+  width: 80%;
+}
+
+input.name {
+  width: 94%;
+  height: 33px;
+  display: inline-block;
+  margin: 10px 16px;
+  padding: 5px;
+}
+
+input[type='submit'] {
+  border-radius: 10px;
+  background: var(--background);
+  border: none;
+  outline: none;
+  color: var(--white);
+  transition: 0.3s;
+  float: right;
+  width: 113px;
+  height: 35px;
+  font-size: 17px;
+  margin: 0px 43px;
+}
+
+/* --------------------- Tablet Size ----------------------*/
+
+@media (min-width: 768px) {
+  footer {
+    justify-content: space-between;
+    padding: 10px 93px;
+  }
+  #container {
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    margin-top: 3px;
+    margin-left: 0;
+  }
+  input[type='submit'] {
+    width: 100px;
+    height: 42px;
+    font-size: 21px;
+    margin: 14px 43px;
+  }
+}
+
+/* --------------------- Desktop Size ----------------------*/
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 10px 145px;
+  }
+  .pa_img {
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .tile,
+  .checked-tile {
+    width: 90%;
+    height: 180px;
+  }
+  #all-screen,
+  #sent-screen {
+    margin: 0 auto;
+    max-width: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'background background';
+  }
+}
