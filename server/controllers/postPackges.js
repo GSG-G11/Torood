@@ -1,7 +1,8 @@
-const { getCustomers } = require('../database/queries/getCustomers');
+const { addPackage } = require('../database/queries/postPackages');
 
-const getCustomersHandler = (req, res) => {
-  getCustomers().then((data) => res.json(data.rows));
+const addPackageHandler = (req, res) => {
+  const {name , image, date} = req.body
+  addPackage(name, image, date).then((data) => res.json(data.rows));
 }
 
-module.exports = { getCustomersHandler };
+module.exports = { addPackageHandler };
