@@ -1,9 +1,11 @@
 const express = require('express');
-const getPackages = require('../database/queries/getPackages');
+const {getPackagesHandler} = require('../controllers/getPackages')
+const {postStoreHandler} = require('../controllers/addStore')
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  getPackages().then((data) => res.json(data.rows));
-});
+router.get('/', getPackagesHandler);
+
+router.post('/add-store', postStoreHandler);
 
 module.exports = router;
