@@ -22,7 +22,9 @@ CREATE TABLE packages (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     customer_id INT REFERENCES customers(id) ON UPDATE CASCADE,
-    store_id INT REFERENCES stores(id) ON UPDATE CASCADE
+    store_id INT REFERENCES stores(id) ON UPDATE CASCADE,
+    image VARCHAR(255) NOT NULL,
+    Package_date date NOT NULL
 );
 
 INSERT INTO
@@ -41,8 +43,8 @@ VALUES
     );
 
 INSERT INTO
-    packages (name, customer_id, store_id)
+    packages (name, customer_id, store_id, image, Package_date)
 VALUES
-    ('Dress', '1', '1');
+    ('Dress', '1', '1','https://torood.co/assets/images/logo.svg','2022-04-24');
 
 COMMIT;
