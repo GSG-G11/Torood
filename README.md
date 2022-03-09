@@ -1,10 +1,15 @@
 # Torood &#128230;
+
+<img src="client/images/screencapture-127-0-0-1-5500-client-index-html-2022-03-09-19_51_02.png">
+
+
 - [Description](#Description)
 - [Features](#features)
 - [Links](#Links)
 - [User Journey](#Journey)
 - [User stories](#stories)
 - [Technologies](#Technology)
+- [ERD](#ERD)
 - [Setup](#setup)
 - [Installation](#install)
 - [Team Members](#team)
@@ -46,6 +51,10 @@ The store owner can create a package by entering the store information and then 
 - Postgres
 - Heroku
 
+
+## ✧ <span id='ERD'>Entity Relationship Digram</span>
+
+<img src="client/images/Torood.drawio2.png">
 
 ## ✧ <span id="setup">Setup</span>
 
