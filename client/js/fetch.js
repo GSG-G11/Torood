@@ -1,5 +1,7 @@
+
 const selectSection = document.getElementById('customerSelectSection');
 const allScreen = document.getElementById('all-screen');
+
 
 fetch('/get-customers')
   .then((res) => res.json())
@@ -39,20 +41,23 @@ const getPackages = (packages) => {
     const packageDiv = document.createElement('div');
     packageDiv.className = 'tile';
 
+ 
+    
     const packageImg = document.createElement('img');
     packageImg.src = package.image;
     packageImg.className = 'pa_img';
 
+
     const packageName = document.createElement('p');
-    packageName.className = 'package_name"';
+    packageName.className = 'package_name';
     packageName.textContent = package.name;
 
     const packagePrice = document.createElement('p');
-    packagePrice.className = 'package_price"';
+    packagePrice.className = 'package_price';
     packagePrice.textContent = package.price;
 
     const packagdate = document.createElement('p');
-    packagdate.className = 'package_date"';
+    packagdate.className = 'package_date';
     const date = new Date(package.package_date);
     const formatDate =
       date.getFullYear() +

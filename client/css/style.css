@@ -172,6 +172,10 @@ form {
   .container {
     width: 540px;
   }
+  .heading-holder h1 {
+    margin-bottom: 2%;
+    font-size:20px;
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -179,6 +183,9 @@ form {
   .container {
     width: 750px;
   }
+  .heading-holder h1 {
+    font-size:25px;
+}
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
