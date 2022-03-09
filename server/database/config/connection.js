@@ -1,12 +1,19 @@
 require('env2')('.env');
-
 const { Pool } = require('pg');
 
-if (!process.env.DB_URL_DEV) {
+let DB_Url = '';
+if (process.env.NODE_ENV === 'development') {
+  DB_Url = process.env.DB_URL_DEV
+}else if(process.env.NODE_ENV  === 'test'){
+  DB_Url = process.env.DB_URL_TEST
+}else if(process.env.NODE_ENV === 'Production'){
+  DB_Url = process.env.DB_URL_PROD
+}else{
   throw new Error('ERROR IN DATABASE CONNECTION!');
 }
+
 const sql = {
-  connectionString: process.env.DB_URL_DEV,
+  connectionString: DB_Url,
   ssl: false,
 };
 

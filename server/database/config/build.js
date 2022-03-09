@@ -1,11 +1,11 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
 
-const connetion = require('./connection');
+const { pool } = require('./connection');
 
 const dbBuild = () => {
   const sql = readFileSync(join(__dirname, 'build.sql')).toString();
-  return connetion.query(sql);
+  return pool.query(sql);
 };
 
 module.exports = { dbBuild };

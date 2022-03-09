@@ -13,15 +13,15 @@ const router = express.Router();
 
 router.get('/get-packages', getPackagesHandler);
 
+router.post('/add-package', addPackageHandler);
+
+router.get('/get-stores', getStoresHandler);
+
 router.post('/add-store', postStoreHandler);
 
 router.post('/add-customer', addCustomerHandler);
 
 router.get('/get-customers', getCustomersHandler);
-
-router.get('/get-stores', getStoresHandler);
-
-router.post('/add-package', addPackageHandler);
 
 router.delete('/delete/:id',deletePackagesHandler);
 
