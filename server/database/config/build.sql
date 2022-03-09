@@ -24,7 +24,8 @@ CREATE TABLE packages (
     customer_id INT REFERENCES customers(id) ON UPDATE CASCADE,
     store_id INT REFERENCES stores(id) ON UPDATE CASCADE,
     image VARCHAR(255) NOT NULL,
-    Package_date date NOT NULL
+    Package_date date NOT NULL,
+    price INT NOT NULL
 );
 
 INSERT INTO
@@ -43,8 +44,22 @@ VALUES
     );
 
 INSERT INTO
-    packages (name, customer_id, store_id, image, Package_date)
+    packages (
+        name,
+        customer_id,
+        store_id,
+        image,
+        Package_date,
+        price
+    )
 VALUES
-    ('Dress', '1', '1','https://torood.co/assets/images/logo.svg','2022-04-24');
+    (
+        'Dress',
+        '1',
+        '1',
+        'https://torood.co/assets/images/logo.svg',
+        '2022-04-24',
+        500
+    );
 
 COMMIT;

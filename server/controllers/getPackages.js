@@ -1,7 +1,7 @@
-const {getPackages} = require('../database/queries/getPackages');
+const { getPackages } = require('../database/queries/getPackages');
 
 const getPackagesHandler = (req, res) => {
-  getPackages().then((data) => console.log(data.rows));
-}
+  getPackages().then((data) => res.json(data.rows));
+};
 
-module.exports = {getPackagesHandler};
+module.exports = { getPackagesHandler };
