@@ -5,6 +5,7 @@ const { getCustomersHandler } = require('../controllers/getCustomers');
 const { addPackageHandler } = require('../controllers/addPackges');
 const { addCustomerHandler } = require('../controllers/addCustomer');
 const { getStoresHandler } = require('../controllers/getStores');
+const { deletePackagesHandler } = require('../controllers/deletePackage');
 
 const router = express.Router();
 
@@ -19,5 +20,9 @@ router.get('/get-customers', getCustomersHandler);
 router.get('/get-stores', getStoresHandler);
 
 router.post('/add-package', addPackageHandler);
+
+router.delete('/delete/:id',deletePackagesHandler);
+
+
 
 module.exports = router;
