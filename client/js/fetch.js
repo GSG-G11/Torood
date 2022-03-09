@@ -62,10 +62,28 @@ const getPackages = (packages) => {
       (date.getDate() - 1);
     packagdate.textContent = formatDate;
 
+    const deleteicon = document.createElement('i');
+    deleteicon.className = 'bx bx-x';
+    deleteicon.id = 'delete-icon';
+
     packageDiv.appendChild(packageImg);
     packageDiv.appendChild(packageName);
     packageDiv.appendChild(packagePrice);
     packageDiv.appendChild(packagdate);
-    allScreen.appendChild(packageDiv);
+    packageDiv.appendChild(deleteicon);
+    allScreen.prepend(packageDiv);
+
+    deleteicon.addEventListener('click' , ()=>{
+      deleteData(package.id);
+      packageDiv.remove();
+    })
+
   });
+};
+
+const deleteData = (id) => {
+  const request = {
+    method: 'DELETE',
+  };
+  return fetch(`/delete/${id}`, request);
 };

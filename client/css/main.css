@@ -89,7 +89,6 @@ a.t_logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
 }
 
 .btn {
@@ -107,9 +106,14 @@ a.t_logo {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-row-gap: 10px;
-  height: auto;
+  height: 90vh;
+  min-height: auto;
 }
-
+i.bx.bx-x {
+  color: #121421;
+  font-size: 20px;
+  cursor: pointer;
+}
 .tile {
   display: flex;
   justify-content: space-around;

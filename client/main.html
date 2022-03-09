@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fovicon link -->
     <link rel="shortcut icon" href="https://torood.co/assets/images/logo.svg" type="image/x-icon">
-    <title>Torood</title>
+    <!-- font link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- style links-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <title>Torood</title>
+
 </head>
 
 <body>
@@ -19,12 +25,12 @@
     </header>
 
     <div class="tabs">
-        <button class="btn active">Add Store</button>
+        <button class="btn">Add Store</button>
         <button class="btn">Add Customer</button>
-        <button class="btn">Packages</button>
+        <button class="btn active">Packages</button>
     </div>
 
-    <div class="tab" id="store">
+    <div class="tab" id="store" style="display: none;">
         <div class="main">
             <div class="container">
                 <div class="heading-form">
@@ -65,7 +71,7 @@
         </div>
     </div>
 
-    <div class="tab" id="package" style="display: none;">
+    <div class="tab" id="package" >
         <div class="container">
             <main>
                 <div class="heading-form">
