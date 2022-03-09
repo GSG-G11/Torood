@@ -65,8 +65,8 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0px;
+  /* position: sticky;
+  top: 0px; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -74,7 +74,13 @@ header {
   background-color: var(--background);
   height: 60px;
 }
-
+.tabs-body {
+  padding-top: 15%;
+}
+.fixed-header {
+  position: fixed;
+  width: 100%;
+}
 .logo {
   width: 35px;
   margin: 5px 20px;
@@ -87,6 +93,11 @@ a.t_logo {
   font-size: 2rem;
   margin: 5px 20px;
 }
+p.package_name {
+  font-size: 17px;
+  color: #121421;
+  text-transform: capitalize;
+}
 
 /* --------------------- .tabs Section Style ----------------------*/
 
@@ -97,12 +108,13 @@ a.t_logo {
   justify-content: center;
 }
 
-.btn {
+.tabs .btn {
   border: 1px solid var(--background);
   background-color: var(--light-gray);
   padding: 10px;
   width: 50%;
   height: 65px;
+  font-size: 15px;
 }
 /* --------------------- .packages-tiles Section Style ----------------------*/
 
@@ -123,6 +135,7 @@ i.bx.bx-x {
 .tile {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 90%;
   margin: 0 auto;
   border-radius: 15px;
@@ -372,6 +385,17 @@ input[type='submit'] {
     margin: 14px 43px;
     cursor: pointer;
   }
+
+}
+@media (min-width: 576px) and (max-width: 767.98px){
+  .tabs-body {
+    padding-top: 29%;
+}
+}
+@media (max-width: 575.98px){
+  .tabs-body {
+    padding-top: 40%;
+}
 }
 
 /* --------------------- Desktop Size ----------------------*/

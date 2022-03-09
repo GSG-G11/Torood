@@ -1,4 +1,4 @@
-# Torood U+1F4E6
+# Torood &#128230;
 - [Description](#Description)
 - [Features](#features)
 - [Links](#Links)
@@ -18,12 +18,12 @@ Torood Express is a Web-based services that specializes in managing the operatio
 
 - Simple UI.
 - Responsive.
-- Fetch data from Backend.
+- Fetch data from Database.
 - Handle user errors and server errors.
 
 ## ✧ <span id='Links'>Links</span>
 
-- [Live link]()
+- [Live link](https://torood.herokuapp.com/)
 
 ## ✧ <span id='Journey'>User Journey</span>
 
