@@ -6,6 +6,8 @@ const { addPackageHandler } = require('../controllers/addPackges');
 const { addCustomerHandler } = require('../controllers/addCustomer');
 const { getStoresHandler } = require('../controllers/getStores');
 const { deletePackagesHandler } = require('../controllers/deletePackage');
+const { clientError } = require('../controllers/errors/404');
+const { ServerError } = require('../controllers/errors/500');
 
 const router = express.Router();
 
@@ -23,6 +25,7 @@ router.post('/add-package', addPackageHandler);
 
 router.delete('/delete/:id',deletePackagesHandler);
 
-
+router.use(clientError)
+router.use(ServerError)
 
 module.exports = router;
