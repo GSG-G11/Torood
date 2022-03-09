@@ -90,26 +90,35 @@
                     <div class="modal-body">
                         <form action="/add-package" method="POST">
                             <div class="first_row">
-                                <input type="text" id="packageName" class="name" placeholder="Enter the package name"
+                                <div>
+                                    <input type="text" id="packageName" class="name" placeholder="Enter the package name"
                                     name="name" required>
                                 <p id="packageNameErr" class="error"></p>
+                                </div>
 
-                                <input type="date" id="packageDate" class="name" placeholder="Enter the date"
+                                <div>
+                                    <input type="date" id="packageDate" class="name" placeholder="Enter the date"
                                     name="date" required>
                                 <p id="packageDateErr" class="error"></p>
+                                </div>
+
 
                             </div>
 
                             <div class="customer_store_names">
-                                <select name="customer_name" id="customerSelectSection">
-                                    <option>Customer Name</option>
-                                </select>
-                                <p id="customerSelectErr" class="error"></p>
+                                <div class="select-cus-name">
+                                    <select name="customer_name" id="customerSelectSection">
+                                        <option>Customer Name</option>
+                                    </select>
+                                    <p id="customerSelectErr" class="error"></p>
+                                </div>
 
-                                <select name="store" id="storeSelectSection">
-                                    <option>Store Name</option>
-                                </select>
-                                <p id="storeSelectErr" class="error"></p>
+                                <div class="select-cus-name">
+                                    <select name="store" id="storeSelectSection">
+                                        <option>Store Name</option>
+                                    </select>
+                                    <p id="storeSelectErr" class="error"></p>
+                                </div>
                             </div>
 
                             <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link"

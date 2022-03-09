@@ -31,8 +31,10 @@ CREATE TABLE packages (
 INSERT INTO
     customers (name, address, mobile)
 VALUES
-    ('Nada', 'Gaza', '0597897546'),
-    ('Manar', 'Ramallah', '0597897546');
+    ('Nada', 'Ramallah', '0597897546'),
+    ('Manar', 'Gaza', '0598752352'),
+    ('Noor', 'Nablus', '0587965423'),
+    ('Nadin', 'Hebron', '0523698547');
 
 INSERT INTO
     stores (name, mobile, account_link)
@@ -41,6 +43,35 @@ VALUES
         'Moda_Turkey',
         '0597897546',
         'https://www.modturky.com/'
+    ),
+    (
+        'Crystal market',
+        '0597092748',
+        'https://www.market.com/'
+    ),
+    (
+        'Newlook',
+        '0597022748',
+        'https://www.newlook.com/'
+    );
+
+INSERT INTO
+    packages (
+        name,
+        customer_id,
+        store_id,
+        image,
+        Package_date,
+        price
+    )
+VALUES
+    (
+        'Shoes',
+        '1',
+        '1',
+        'https://cutt.ly/hAImNqW',
+        '2022-04-20',
+        500
     );
 
 INSERT INTO
@@ -55,11 +86,49 @@ INSERT INTO
 VALUES
     (
         'Dress',
+        '2',
         '1',
-        '1',
-        'https://torood.co/assets/images/logo.svg',
+        'https://cutt.ly/PAIW6tZ',
+        '2022-04-2',
+        200
+    );
+
+INSERT INTO
+    packages (
+        name,
+        customer_id,
+        store_id,
+        image,
+        Package_date,
+        price
+    )
+VALUES
+    (
+        'T-shirt',
+        '3',
+        '3',
+        'https://cutt.ly/XAIWAwE',
+        '2022-03-20',
+        300
+    );
+
+INSERT INTO
+    packages (
+        name,
+        customer_id,
+        store_id,
+        image,
+        Package_date,
+        price
+    )
+VALUES
+    (
+        'Bag',
+        '4',
+        '3',
+        'https://cutt.ly/5AIEiuu',
         '2022-04-24',
-        500
+        100
     );
 
 COMMIT;
