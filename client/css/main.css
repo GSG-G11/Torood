@@ -240,9 +240,10 @@ a.add-btn:hover {
   border-radius: 10px;
   z-index: 10;
   background-color: var(--white);
-  width: 600px;
+  width: 635px;
   max-width: 80%;
   display: none;
+  padding: 20px 18px;
 }
 
 #modal.active {
@@ -250,11 +251,11 @@ a.add-btn:hover {
 }
 
 .modal-header {
-  padding: 10px 15px 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--background);
+  /* padding: 3px 17px; */
 }
 
 .modal-title {
@@ -271,20 +272,43 @@ a.add-btn:hover {
   font-size: 30px;
   margin: 3px;
 }
-
+.customer_store_names {
+  display: flex;
+  margin-bottom: 4%;
+}
+select#customerSelectSection,select#storeSelectSection {
+  width: 46%;
+  height: 2.5rem;
+  padding: 0.375rem 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+select#customerSelectSection{
+  margin-right: 2%;
+}
 .first_row {
   display: grid;
   grid-template-columns: repeat(2, 290px);
   gap: 0;
   width: 80%;
+  margin-bottom: 4%;
+  margin-top: 2%;
 }
 
 input.name {
-  width: 94%;
+  width: 95%;
   height: 33px;
   display: inline-block;
-  margin: 10px 16px;
-  padding: 5px;
+  /* margin: 10px 10px 5%; */
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  line-height: 1.5;
+  height: 2.5rem;
 }
 
 input[type='submit'] {
@@ -316,10 +340,11 @@ input[type='submit'] {
     margin-left: 0;
   }
   input[type='submit'] {
-    width: 100px;
-    height: 42px;
-    font-size: 21px;
+    width: 125px;
+    height: 45px;
+    font-size: 16px;
     margin: 14px 43px;
+    cursor: pointer;
   }
 }
 

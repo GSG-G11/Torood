@@ -94,7 +94,7 @@
                 <!-- Add Modal Box Section -->
                 <div class="modal" id="modal">
                     <div class="modal-header">
-                        <p class="modal-title">Write Your Order!</p>
+                        <p class="modal-title">Add Your Package &#10024;</p>
                         <button class="close-btn">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -103,14 +103,17 @@
                                 <input type="text" id="packageName" class="name" placeholder="Enter the package name" name="name">
                                 <input type="date" id="packagedate" class="name" placeholder="Enter the date" name="date">
                             </div>
-                            <label>Customer Name</label>
-                            <select name="customer_name" id="customerSelectSection">
-            
-                            </select>
-                            <label>Store Name</label>
-                            <select name="store" id="storeSelectSection">
-                            
-                            </select>
+
+                            <div class="customer_store_names">
+                                <select name="customer_name" id="customerSelectSection">
+                                    <option>Customer Name</option>
+                                </select>
+
+                                <select name="store" id="storeSelectSection">
+                                    <option>Store Name</option>
+                                </select>
+                            </div>
+
                             <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link" name="image">
                             <input id="button" type="submit" value="Submit">
                         </form>
