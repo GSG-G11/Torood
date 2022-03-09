@@ -14,17 +14,17 @@
 <body>
 
     <header>
-        <img class="logo" src="https://torood.co/assets/images/logo.svg" alt="Logo">
+       <img class="logo" src="https://torood.co/assets/images/logo.svg" alt="Logo" onclick="window.location.href = 'index.html'">
         <a href="index.html" class="t_logo">Torood</a>
     </header>
 
     <div class="tabs">
-        <button class="btn">Add Store</button>
+        <button class="btn active">Add Store</button>
         <button class="btn">Add Customer</button>
-        <button class="btn active">Packages</button>
+        <button class="btn">Packages</button>
     </div>
 
-    <div class="tab" id="store" style="display: none;">
+    <div class="tab" id="store">
         <div class="main">
             <div class="container">
                 <div class="heading-form">
@@ -47,7 +47,7 @@
                                     <input type="text" class="form-control" id="storeLink" name="link"
                                         placeholder="Enter your store website link">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Add Store</button>
+                                <button type="submit" class="btn btn-primary" id="storeBtn">Add Store</button>
                             </form>
                         </div>
 
@@ -65,32 +65,18 @@
         </div>
     </div>
 
-    <div class="tab" id="package">
-       <div class="container">
+    <div class="tab" id="package" style="display: none;">
+        <div class="container">
             <main>
                 <div class="heading-form">
                     <h2>All Packages</h2>
                 </div>
                 <!-- All Packages -->
-                <section id="all-screen">
-            
-                    <div class="tile">
-                        <img src="images/dress.Jpg" alt="image" class="pa_img">
-                        <p class="package_name">Dress</p>
-                        <p class="package_price">22 NIS</p>
-                        <p class="package_date">24 April 2022</p>
-                    </div>
-                    <div class="tile">
-                        <img src="images/dress.Jpg" alt="image" class="pa_img">
-                        <p class="package_name">Dress</p>
-                        <p class="package_price">22 NIS</p>
-                        <p class="package_date">24 April 2022</p>
-                    </div>
-                </section>
-            
+                <section id="all-screen"></section>
+
                 <!-- Sent Packages -->
                 <section id="sent-screen"> </section>
-            
+
                 <!-- Add Modal Box Section -->
                 <div class="modal" id="modal">
                     <div class="modal-header">
@@ -100,8 +86,10 @@
                     <div class="modal-body">
                         <form action="/add-package" method="POST">
                             <div class="first_row">
-                                <input type="text" id="packageName" class="name" placeholder="Enter the package name" name="name">
-                                <input type="date" id="packagedate" class="name" placeholder="Enter the date" name="date">
+                                <input type="text" id="packageName" class="name" placeholder="Enter the package name"
+                                    name="name">
+                                <input type="date" id="packagedate" class="name" placeholder="Enter the date"
+                                    name="date">
                             </div>
 
                             <div class="customer_store_names">
@@ -114,12 +102,15 @@
                                 </select>
                             </div>
 
-                            <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link" name="image">
+                            <input type="text" id="packageImage" class="name" placeholder="Enter the Image Link"
+                                name="image">
+                            <input type="number" value="price" placeholder="Enter package price" name="price">
+
                             <input id="button" type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
-            
+
                 <!-- Overlay -->
                 <div id="overlay"></div>
             </main>
@@ -143,10 +134,10 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <button class="add-btn">+</button>
             </footer>
-       </div>
+        </div>
     </div>
 
     <div class="tab" id="customer" style="display: none;">
@@ -172,7 +163,7 @@
                                     <input type="text" class="form-control" id="storeLink" name="address"
                                         placeholder="Enter customer address">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Add Customer</button>
+                                <button type="submit" class="btn btn-primary" id="addCustomer">Add Customer</button>
                             </form>
                         </div>
 
@@ -189,7 +180,6 @@
 
         </div>
     </div>
-
 
     <script src="js/fetch.js"></script>
     <script src="js/index.js"></script>

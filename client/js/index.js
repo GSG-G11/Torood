@@ -9,6 +9,8 @@ const toggleNumber = false;
 const storeBtn = document.getElementsByClassName('btn')[0];
 const customerBtn = document.getElementsByClassName('btn')[1];
 const packageBtn = document.getElementsByClassName('btn')[2];
+const addStoreBtn = document.getElementById('storeBtn');
+const addCustomerBtn = document.getElementById('addCustomer');
 
 // open
 
@@ -64,10 +66,6 @@ function openTab(tapName) {
   document.getElementById(tapName).style.display = 'block';
 }
 
-storeBtn.className = 'btn';
-customerBtn.className = 'btn';
-packageBtn.className = 'btn';
-
 storeBtn.addEventListener('click', () => {
   storeBtn.className = 'btn active';
   customerBtn.className = 'btn';
@@ -87,4 +85,17 @@ packageBtn.addEventListener('click', () => {
   storeBtn.className = 'btn';
   customerBtn.className = 'btn';
   openTab('package');
+});
+
+addStoreBtn.addEventListener('click', () => {
+  openTab('customer');
+  customerBtn.className = 'btn active';
+  storeBtn.className = 'btn';
+});
+
+addCustomerBtn.addEventListener('click', () => {
+  openTab('package');
+  packageBtn.className = 'btn active';
+  customerBtn.className = 'btn';
+  storeBtn.className = 'btn';
 });
