@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'development') {
 } else if (process.env.NODE_ENV === 'test') {
   DB_Url = process.env.DB_URL_TEST;
 } else if (process.env.NODE_ENV === 'Production') {
-  DB_Url = process.env.DB_URL_PROD;
+  DB_Url = process.env.DATABASE_URL;
 } else {
   throw new Error('ERROR IN DATABASE CONNECTION!');
 }
