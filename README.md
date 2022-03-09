@@ -72,7 +72,7 @@ The store owner can create a package by entering the store information and then 
 ## ✧ <span id='install'>Installing the project locally</span>
 
 - `https://github.com/GSG-G11/Torood`
-- `code Reddit-Express`
+- `code Torood`
 - `npm i`
 - `npm run start`
 
