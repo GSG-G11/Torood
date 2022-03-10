@@ -95,8 +95,7 @@ const submitStoreHandler = (event) => {
       event
     );
   } else {
-    openTab('customer');
-    customerBtn.className = 'btn active';
+    customerBtn.className = 'btn';
     storeBtn.className = 'btn';
     packageBtn.className = 'btn';
   }
