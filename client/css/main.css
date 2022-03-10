@@ -108,13 +108,13 @@ p.package_name {
   justify-content: center;
 }
 
-.tabs .btn {
+.btn {
   border: 1px solid var(--background);
   background-color: var(--light-gray);
   padding: 10px;
   width: 50%;
   height: 65px;
-  font-size: 15px;
+ /* font-size: 15px; */
 }
 /* --------------------- .packages-tiles Section Style ----------------------*/
 
@@ -385,11 +385,16 @@ input[type='submit'] {
     margin: 14px 43px;
     cursor: pointer;
   }
+  .tabs-body {
+    padding-top: 13%;
+    height: 120vh;
+}
 
 }
 @media (min-width: 576px) and (max-width: 767.98px){
   .tabs-body {
     padding-top: 29%;
+    height: 130vh;
 }
 }
 @media (max-width: 575.98px){
